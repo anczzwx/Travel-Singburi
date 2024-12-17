@@ -40,6 +40,67 @@ main {
     max-width: 800px; 
     margin: 0 auto; 
 } 
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ดูมีมิติ */
+    max-width: 600px;
+    margin: 2rem auto; /* จัดกึ่งกลาง และเพิ่มระยะห่างด้านบน */
+}
+
+form label {
+    margin-bottom: 8px;
+    font-weight: bold; /* เน้นข้อความหัวข้อ */
+    color: #333; /* สีข้อความเข้ม */
+}
+
+form input,
+form textarea {
+    margin-bottom: 15px;
+    padding: 12px; /* เพิ่มระยะห่างภายในช่อง */
+    font-size: 1rem;
+    border: 1px solid #ddd; /* สีเส้นขอบอ่อน */
+    border-radius: 6px; /* มุมโค้งมน */
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border: 1px solid #0078d7; /* เปลี่ยนสีขอบเมื่อโฟกัส */
+    box-shadow: 0px 0px 6px rgba(0, 120, 215, 0.5); /* เพิ่มเงาสีฟ้า */
+    outline: none;
+}
+
+form textarea {
+    resize: vertical; /* ให้ย่อขยายได้เฉพาะแนวตั้ง */
+    min-height: 150px; /* ความสูงเริ่มต้น */
+}
+
+form button {
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #0053a6; /* เปลี่ยนสีเข้มขึ้นเมื่อชี้เมาส์ */
+    transform: scale(1.03); /* ขยายเล็กน้อย */
+}
+
+form button:active {
+    background-color: #004494; /* สีเข้มขึ้นเมื่อกดปุ่ม */
+    transform: scale(0.98); /* กดแล้วหดเล็กน้อย */
+}
  
 footer {
     background: #333;
